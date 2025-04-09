@@ -2,6 +2,7 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -104,6 +105,7 @@ export default function Home() {
     <main>
       {/* 헤더 */}
       <header className="header">
+        <Analytics />
         <div className="logo" onClick={scrollToTop}>
           SeokChan <span>Portfolio</span>
         </div>
