@@ -3,6 +3,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Analytics } from "@vercel/analytics/react";
+import React from "react";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -65,32 +66,37 @@ export default function Home() {
   const projects = {
     교내: [
       {
-        title: "졸업 프로젝트",
-        description: "사용자 중심 서비스 기획",
+        title: "Data Analysis",
+        description: "# 재가공 동영상 콘텐츠 선별 프로젝트\n# 데이터분석및활용",
         file: "project1.pdf",
       },
       {
-        title: "디자인 씽킹 워크샵",
-        description: "UX/UI 디자인 프로젝트",
+        title: "Data Analysis",
+        description: "# 텍스트마이닝 기반 MBTI별 노래 추천\n# 스마트AI시스템",
         file: "project2.pdf",
+      },
+      {
+        title: "ETC",
+        description: "# Marketing\n# Process Modeling",
+        file: "project3.pdf",
       },
     ],
     수상: [
       {
-        title: "공모전 대상",
-        description: "신규 서비스 기획 제안",
+        title: "대상 수상",
+        description: "LG유플러스 고객 통합 관리 서비스",
         file: "award1.pdf",
       },
       {
-        title: "해커톤 우승",
-        description: "헬스케어 앱 프로토타입",
+        title: "우수상 수상",
+        description: "Visualized Artifical Personal training",
         file: "award2.pdf",
       },
     ],
     개인: [
       {
         title: "사이드 프로젝트",
-        description: "커뮤니티 서비스 기획",
+        description: "청춘상회",
         file: "personal1.pdf",
       },
       {
@@ -217,7 +223,14 @@ export default function Home() {
               <h3 style={{ color: "#007AFF", marginBottom: "8px" }}>
                 {project.title}
               </h3>
-              <p>{project.description}</p>
+              <p style={{ lineHeight: "1.6" }}>
+                {project.description.split("\n").map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </p>
               <div
                 style={{
                   marginTop: "16px",
