@@ -95,13 +95,13 @@ export default function Home() {
     ],
     개인: [
       {
-        title: "사이드 프로젝트",
-        description: "청춘상회",
+        title: "다대다 번개 모임 매칭 플랫폼, 청춘상회 ",
+        description: "프로덕트 기획 / UI∙UX 디자인",
         file: "personal1.pdf",
       },
       {
-        title: "스터디 모임",
-        description: "서비스 분석 리포트",
+        title: "주식회사 비주얼캠프 Intership",
+        description: "기획/운영 지원 & 마케팅",
         file: "personal2.pdf",
       },
     ],
