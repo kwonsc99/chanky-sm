@@ -1,0 +1,46 @@
+:root {
+  /* Modern color palette */
+  --primary-color: #3b82f6; /* Updated blue */
+  --primary-color-dark: #2563eb;
+  --accent-color: #f97316; /* Orange accent */
+  --background-color: #f9fafb;
+  --text-color: #1f2937;
+  --container-bg: #f9fafb;
+  --card-bg: #ffffff;
+  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+  /* Font sizes using fluid typography */
+  --fs-xl: clamp(2rem, 5vw, 3rem);
+  --fs-lg: clamp(1.5rem, 3vw, 2rem);
+  --fs-md: clamp(1.1rem, 2vw, 1.5rem);
+  --fs-sm: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}

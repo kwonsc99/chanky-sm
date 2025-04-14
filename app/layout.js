@@ -1,7 +1,13 @@
+import { Inter, Noto_Sans_KR } from "next/font/google";
+import "../styles/theme.css";
 import "./globals.css";
-import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const notoSansKR = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-noto-sans-kr",
+});
 
 export const metadata = {
   title: "주니어 기획자 권석찬 포트폴리오",
@@ -11,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={`${notoSansKR.variable}`}>
       <body className={inter.className}>{children}</body>
     </html>
   );
