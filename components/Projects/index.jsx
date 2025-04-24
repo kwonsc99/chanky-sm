@@ -1,15 +1,23 @@
+// *index.jsx*
 import { forwardRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { projectsData } from "@/data/projectsData";
 
 const Projects = forwardRef((props, ref) => {
-  const [activeCategory, setActiveCategory] = useState("교내");
+  const [activeCategory, setActiveCategory] = useState("전체");
+
+  const getAllProjects = () => {
+    return Object.values(projectsData).flat();
+  };
+
+  const displayedProjects =
+    activeCategory === "전체" ? getAllProjects() : projectsData[activeCategory];
 
   return (
     <section className="container" ref={ref}>
       <h2 className="heading">Projects</h2>
       <div className="categories">
-        {Object.keys(projectsData).map((category) => (
+        {["전체", ...Object.keys(projectsData)].map((category) => (
           <div
             key={category}
             className={`category ${
@@ -23,7 +31,7 @@ const Projects = forwardRef((props, ref) => {
       </div>
 
       <div className="project-list">
-        {projectsData[activeCategory].map((project, idx) => (
+        {displayedProjects.map((project, idx) => (
           <ProjectCard key={idx} project={project} />
         ))}
       </div>
@@ -61,31 +69,26 @@ const Projects = forwardRef((props, ref) => {
         .category.active {
           background-color: var(--primary-color);
           color: white;
-          box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+          box-shadow: 0 4px 12px rgba(255, 237, 237, 1);
         }
 
         .project-list {
           display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 30px;
-          padding: 0 40px;
-          margin-bottom: 120px;
+          flex-direction: column;
+          gap: 24px;
+          padding: 0 20px 120px;
+          max-width: 720px;
+          margin: 0 auto;
         }
 
         @media (max-width: 768px) {
-          .categories {
-            gap: 10px;
-          }
-
           .category {
             padding: 8px 16px;
             font-size: 13px;
           }
 
           .project-list {
-            grid-template-columns: 1fr;
-            padding: 0 20px;
+            padding: 0 16px 80px;
           }
         }
       `}</style>

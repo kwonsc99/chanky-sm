@@ -5,11 +5,11 @@ export default function Hero({ isAnimated }) {
     <section className="container hero-container">
       <div className="intro-container">
         <h1 className="heading">
-          주니어 기획자 <span className="bold">권석찬</span>입니다.
+          관찰하는 전략가 <span className="bold">권석찬</span>입니다.
         </h1>
         <p className="subheading">
-          고객의 필요를 선제적으로 파악하고, 적시에 실현가능한 형태로
-          제공하겠습니다.
+          정성적・정량적 데이터를 기반으로 고객을 관찰하고, 유의미한 결과를
+          창출하겠습니다.
         </p>
         <div className="intro-section">
           <div className="slide-container">
