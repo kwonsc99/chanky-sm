@@ -1,8 +1,8 @@
 export const aboutMeData = {
   education: [
-    { date: "2018.01", content: "부천 상원고등학교 졸업" },
+    { date: "2018.01", content: "OO고등학교 졸업" },
     { date: "2020.10", content: "대한민국 육군 병장 만기전역" },
-    { date: "2025.02", content: "숭실대학교 산업정보시스템공학과 졸업" },
+    { date: "2025.02", content: "OO대학교 산업정보시스템공학과 졸업" },
   ],
   awards: [
     {
@@ -22,7 +22,7 @@ export const aboutMeData = {
   internship: [
     {
       date: "2023.02 - 2023.11",
-      content: "(주)비주얼캠프 Seeso Edu 기획/운영 지원",
+      content: "(주)비주얼캠프\nSeeso Edu 기획/운영 지원",
     },
   ],
   language: [
@@ -31,8 +31,8 @@ export const aboutMeData = {
     { label: "봉사:", content: "228시간" },
   ],
   activities: [
-    "숭실대 산업정보시스템공학과 30대 학생회 임원",
-    "숭실대 흑인 음악동아리 다피스",
+    "OO대 산업정보시스템공학과 30대 학생회 임원",
+    "OO대 흑인 음악동아리 다OO",
     "Code Club SW 교육봉사단",
     "CRM&디지털마케팅 직무부트캠프 수료",
     "대한산업공학회 산하 학술동아리 FIELD 14기 기획국원",
