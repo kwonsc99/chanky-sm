@@ -8,8 +8,8 @@ export default function Hero({ isAnimated }) {
           관찰하는 전략가 <span className="bold">권석찬</span>입니다.
         </h1>
         <p className="subheading">
-          정성적・정량적 데이터를 기반으로 고객을 관찰하고, 유의미한 결과를
-          창출하겠습니다.
+          정성적・정량적 데이터를 기반으로 고객을 관찰하고, 유의미한 성공 전략을
+          설계하겠습니다.
         </p>
         <div className="intro-section">
           <div className="slide-container">
@@ -78,7 +78,7 @@ export default function Hero({ isAnimated }) {
           margin-bottom: 2rem;
           font-weight: 300;
           line-height: 1.6;
-          max-width: 800px;
+          max-width: 1000px;
           margin-left: auto;
           margin-right: auto;
         }

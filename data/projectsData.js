@@ -39,7 +39,7 @@ export const projectsData = {
       file: "project3.pdf",
     },
   ],
-  Intership: [
+  Internship: [
     {
       title: "주식회사 비주얼캠프 Intership",
       description: "인턴십  |  기획/운영 지원 및 마케팅",
