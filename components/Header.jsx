@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { scrollToSection } from "@/utils/scrollUtils";
+import Image from "next/image";
 
 export default function Header({ aboutMeRef, projectsRef }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,7 +22,13 @@ export default function Header({ aboutMeRef, projectsRef }) {
   return (
     <header className="header">
       <div className="logo" onClick={scrollToTop}>
-        SeokChan <span>Portfolio</span>
+        <Image
+          src="/sm_logo.png" // public 디렉토리에 logo.png가 있다고 가정
+          alt="Photogray 로고"
+          width={130.13} // 크기는 원하는 대로 조절
+          height={39.26}
+          priority // 로고는 페이지 진입 시 바로 보이는 요소라 우선 로딩
+        />
       </div>
 
       {/* Desktop Navigation */}

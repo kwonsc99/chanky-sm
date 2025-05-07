@@ -132,7 +132,7 @@ const AboutMe = forwardRef((props, ref) => {
         }
 
         .activity-item {
-          background-color: rgba(59, 130, 246, 0.08);
+          background-color: #fff0f5;
           padding: 6px 12px;
           border-radius: 20px;
           margin-bottom: 8px;
